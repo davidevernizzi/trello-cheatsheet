@@ -1,0 +1,91 @@
+\documentclass[10pt,DIV=50,landscape,pagesize,parskip=off]{scrartcl}
+
+% Autor: Davide Vernizzi <davide.vernizzi@gmail.com>
+% This work is based on the Vim Cheat Sheet by Thomas Waldecker https: //github.com/twaldecker/vim-cheat-sheet
+% This work is licensed under the Creative Commons Attribution-ShareAlike 3.0
+% Unported License. To view a copy of this license, visit
+% http://creativecommons.org/licenses/by-sa/3.0/
+
+\usepackage[english]{babel}
+\usepackage{xltxtra}
+\usepackage{blindtext}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{url}
+%\usepackage{keystroke}
+\usepackage{menukeys}
+%\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{tikz}
+
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+
+\lstset{%
+  basicstyle=\ttfamily
+}
+
+\setlength{\parindent}{0pt}
+
+\newcommand\co[1]{\lstinline{#1}}
+\newcommand\coe[2]{\begin{tabularx}{.9\linewidth}{lR}
+#1&#2
+\end{tabularx}
+}
+
+\setmainfont[Mapping=tex-text]{Myriad Pro}
+%\setmonofont{Source Code Pro}
+\setkomafont{sectioning}{\fontspec[Color=NavyBlue]{Myriad Pro}}
+
+
+\begin{document}
+\section*{{\Huge \fontspec{Myriad Pro Bold}Trello Cheat Sheet}}
+\begin{multicols}{3}
+\section{Movement}
+\coe{\keys{\arrowkeyleft} / \keys{\arrowkeyright}}{Move forward / backward in lists}
+\coe{\keys{\arrowkeyup} \keys{K} / \keys{\arrowkeydown} \keys{J}}{Move up / down in cards}
+\coe{\keys{\return}}{Open card}
+\coe{\keys{B}}{Open boards menu}
+\coe{\keys{/}}{Focus Search Box}
+
+\section{Card management}
+\coe{\keys{C}}{Archive card}
+\coe{\keys{D}}{Due date}
+\coe{\keys{E}}{Edit card description}
+\coe{\keys{M}}{Add / Remove Members}
+\coe{\keys{N}}{Insert New Card}
+\coe{\keys{<}\keys{>}}{Move Card to previous / next List}
+\coe{\keys{S}}{Subscribe}
+\coe{\keys{space}}{Assign Self}
+\coe{\keys{T}}{Edit Title}
+\coe{\keys{V}}{Vote}
+
+\section{Filters}
+\coe{\keys{F}}{Open Card Filter Menu}
+\coe{\keys{X}}{Clear All Filters}
+\coe{\keys{Q}}{My Cards Filter}
+
+\section{Labels}
+\coe{\keys{L}}{Opens a popover of the available labels}
+\coe{\keys{1}}{Green label}
+\coe{\keys{2}}{Yellow label}
+\coe{\keys{3}}{Orange label}
+\coe{\keys{4}}{Red label}
+\coe{\keys{5}}{Purple label}
+\coe{\keys{6}}{Blue label}
+
+
+
+
+\begin{framed}
+{\small Autor: Davide Vernizzi\\
+<\url{mailto:davide.vernizzi@gmail.com}> URL:
+\url{https://github.com/davidedavidevernizzi/trello-cheat-sheet}
+This work is licensed under the
+Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of
+this license, visit http://creativecommons.org/licenses/by-sa/3.0/.}
+\end{framed}
+
+\end{multicols}
+\end{document}
